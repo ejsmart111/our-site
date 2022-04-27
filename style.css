@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif; 
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 15px 29px 49px 0px #ededed;
+    height: 70px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container-nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 10px;
+    width: 100%;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 120px
+}
+
+.nav-link-ul { 
+    display: none;
+}
+
+.responsive-links { 
+    display: block;
+}
+
+.hamburger {
+    font-size: 28px;
+    margin-top: 3px;
+}
+
+.nav-link-ul-responsive {
+    background-color: #ffffff;
+    box-shadow: -15px 29px 49px 0px #ededed;
+    border-top: 0;
+    height: 100%;
+    list-style: none;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    transition: all 0.1s linear;
+    top: 50px;
+    visibility: hidden;
+    width: 0px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hamburger:focus + .nav-link-ul-responsive {
+    visibility: visible;
+    width: 200px;
+}
+
+.nav-link-ul-responsive > li {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.nav-link-ul-responsive > li > a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.poppin-headers {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+footer {
+    background-color: #090922;
+    box-sizing: border-box;
+    color: #ffffff;
+    height: 30px;
+    padding: 10px;
+}
+
+.head-1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+#opening-section {
+    margin-top: 120px;
+}
+
+#second-section, #third-section, footer {
+    margin-top: 100px;
+}
+
+.items1 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 10em;
+    justify-content: center;
+    text-align: center;
+}
+
+.items2 {
+    flex: 1 1 5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.opening-img {
+    margin-top: 40px;
+    min-width: 300px ;
+}
+
+.head-image {
+    width: 100px;
+}
+
+.head {
+    font-size: 24px;
+}
+
+.big-texts {
+    font-size: 18px;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.testimonials {
+    display: grid;
+    gap: 1.5em;
+    grid-template-areas: 
+    'purples'
+    'whitee'
+    'whiteee'
+    'navyblue'
+    'ashy';
+}
+
+.avatar-img {
+    border-radius: 50%;
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+}
+
+.inner {
+    border: 1px solid #6b6b6b;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.inner:first-of-type {
+    background-color: rgb(118, 53, 230);
+    grid-area: purples;
+}
+
+.inner .name, .inner .second-row {
+    color: #ffffff;
+}
+
+.inner:nth-of-type(2) .name, 
+.inner:nth-of-type(2) .second-row, 
+.inner:nth-of-type(3) .name, 
+.inner:nth-of-type(3) .second-row {
+    color: #333333;
+}
+
+.ttt {
+    font-size: 14px;
+}
+
+.first-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.first-row .avatar {
+    flex: 0 0 50px
+}
+
+.avatar {
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.inner:nth-of-type(2) {
+    background-color: rgb(255, 255, 255);
+    grid-area: whiteee;
+}
+
+.inner:nth-of-type(3) {
+    background-color: rgb(255, 255, 255);
+    grid-area: whitee;
+}
+
+.inner:nth-of-type(4) {
+    background-color: rgb(16, 9, 29);
+    grid-area: navyblue;
+}
+
+.inner:last-of-type {
+    background-color: rgb(86, 86, 86);
+    grid-area: ashy;
+}
+
+@media (min-width: 800px) {
+    .container-nav {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .sec-2 {
+        display: flex;
+        gap: 1em;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 70%;
+    }
+    
+    .nav-link-ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0
+    }
+
+    .responsive-links { 
+        display: none;
+    }
+    
+    .list-item > a {
+        color: #090922;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .list-item > a:hover {
+        color: #b2b2f5;
+    }
+    
+    .list-item {
+        margin-left: 10px;
+    }  
+    
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        grid-template-areas: 
+        'purples purples whiteee ashy' 
+        'whitee navyblue navyblue ashy';
+        width: 70%;
+    }
+}
